@@ -138,3 +138,7 @@ table.table-bordered > tbody > tr > td{
 .table img {
   width: 100px;
 }
+
+#footer {
+  text-align: center;
+}
