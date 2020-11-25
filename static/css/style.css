@@ -1,0 +1,88 @@
+body {background-color: #fceac1;}
+
+.nav {
+  background-color:rgba(255, 255, 255, 0.2);
+  background-image:url(../../resources/navbar.png);
+  background-position:top left;
+  background-repeat:repeat;
+  background-attachment:fixed;
+  color:white;
+  height: 80px;
+}
+
+.nav-link {
+  color: #3d0c02;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding-top: 10px;
+}
+
+.nav-link:hover {
+  color: #882d17;
+}
+
+#sidebar {
+  min-width: 450px;
+  max-width: 450px;
+  min-height: 100vh;
+  background: #253923;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  text-align: center;
+  color: #fceac1
+  }
+
+  @media only screen and (max-width: 1000px) { 
+    #sidebar { 
+      display: none; 
+    } 
+  }
+
+  .card {
+    background-color: #fceac1;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 40px;
+  }  
+
+  .turtle {
+    width: 100px !important;
+    display: inline;
+  }
+
+  .characters {
+    padding-top: 0px;
+  }
+
+  h6 {
+    font-weight:normal;
+  }
+
+  .card img {
+    width: 150px;
+  }
+
+  p {
+    font-weight:bold;
+  }
+
+  .title {
+    /* margin: 0; */
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  h2 {
+    margin-top: 20px;
+    color: #3d0c02;
+    font-weight: bold;
+    text-align: center;
+  }
