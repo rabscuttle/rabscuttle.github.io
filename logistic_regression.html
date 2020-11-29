@@ -46,6 +46,59 @@
 
 <!-- Body -->
 <body>
+  <div class="container pt-3">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Logistic Regression</h2>
+        <h4>Explaination of Model</h4>
+        <p>Logistic Regression is a type of Machine Learning Classification used to identify data with one predefined label based on the features available. Because our data had 16 features, our first attempt at Machine Learning was to use Multiple Linear Regression. With Scikit-learn, we:
+        </p>
+        <ol>
+          <li>Split our data into a training set and a testing set</li>
+          <li>Defined our model</li>
+          <li>Fit our model</li>
+          <li>Scored our model</li>
+        </ol>
+        <p>We then went through this process again after we transformed the data using MinMaxScaler, which scales and translates each feature individually within the given training set.
+        </p>
+        <p>We finished our logistic regression model with residual plots. Because we have more than three features, we can’t easily visualize our data using a scatter plot graph.  Using a residual plot we can check our predictions.            
+        </p>
+        <hr>
+        <h4>Results of Model</h4><br>
+        <div class="table-responsive table-sm table-striped">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Training Score</th>
+                <th scope="col">Testing Score</th>
+                <th scope="col">Incorrect</th>
+                <th scope="col">Scaled Training Score</th>
+                <th scope="col">Scaled Testing Score</th>
+                <th scope="col">Scaled Incorrect</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0.981132075</td>
+                <td>0.943396226</td>
+                <td>4</td>
+                <td>0.987421384</td>
+                <td>0.962264151</td>
+                <td>8</td>
+              </tr>
+          </table>
+          
+        </div>
+        <br>
+        <img src = "../../resources/logreg.png" width="1100" >
+        <img src = "../../resources/residual.png" width="1100" >
+        <br><br><br><hr>
+        <img src = "../../resources/minmaxlogreg.png" width="1100" >
+        <img src = "../../resources/minmaxresidual.png" width="1100" >
+        
+        </div>
+    </div>
+  </div>
 
   
   <!-- Footer  -->
