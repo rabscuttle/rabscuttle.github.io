@@ -1,9 +1,9 @@
-﻿Character,Logistical Regression,Random Forest,K Nearest Neighbors,SVM,Neural Netwrok,Deep Neural Network
-Kangaroo,Mammal,Mammal,Mammal,Mammal,Mammal,Mammal
-Eagle,Bird,Bird,Bird,Bird,Bird,Bird
-Rattle Snake,Reptile,Reptile,Reptile,Reptile,Reptile,Reptile
-Goldfish,Fish,Fish,Fish,Fish,Fish,Fish
-Mountain Chicken Frog,Amphibian,Amphibian,Amphibian,Amphibian,Amphibian,Amphibian
-Vampire Moth,Bug,Bug,Bug,Bug,Bug,Bug
-Coral,Invertrbrate,Invertrbrate,Invertrbrate,Invertrbrate,Amphibian,Amphibian
-Sea Turtle,Fish,Fish,Reptile,Reptile,Reptile,Reptile
+﻿Character,Actual,Logistical Regression,Random Forest,K Nearest Neighbors,SVM,Neural Netwrok,Deep Neural Network
+Kangaroo,Mammal,Mammal,Mammal,Mammal,Mammal,Mammal,Mammal
+Eagle,Bird,Bird,Bird,Bird,Bird,Bird,Bird
+Rattle Snake,Reptile,Reptile,Reptile,Reptile,Reptile,Reptile,Reptile
+Goldfish,Fish,Fish,Fish,Fish,Fish,Fish,Fish
+Mountain Chicken Frog,Amphibian,Amphibian,Amphibian,Amphibian,Amphibian,Amphibian,Amphibian
+Vampire Moth,Bug,Bug,Bug,Bug,Bug,Bug,Bug
+Coral,Invertrbrate,Invertrbrate,Invertrbrate,Invertrbrate,Invertrbrate,Amphibian,Amphibian
+Sea Turtle,Reptile,Fish,Fish,Reptile,Reptile,Reptile,Reptile
