@@ -6,6 +6,9 @@
   <meta charset="UTF-8">
   <title>Animal Classification</title>
 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../resources/icon_turtle.png">
+
   <!--Bootstrap-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   
@@ -91,7 +94,7 @@
       <div class="col-sm-9" id="content">
         <div class="row">
           <div class = "col-12 title">
-            <h2> Predicting Animal Class Using Various Characteristics</h2>
+            <h2> Predicting Animal Class Using Various Attributes</h2>
           </div>          
         </div>
 
@@ -100,15 +103,25 @@
           <div class="col-6 intro">
              <h3>Introduction to Project</h3>
 
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          </div>  
+             <p>This website is part of our final project for the University of Minnesota Data Analytics bootcamp.  
+               Our goal is to determine which of the machine learning models we learned in class can most accurately
+               predict the classification of an animal based on various provided attributes.  Our data comes from the 
+               Zoo Data Set that is part of the UCI Machine Learning repository.  It is a combination of the original
+               data set along with an extension data set to add additional animals, for a total of 212 distinct animals.
+               Visit our <a href = "https://rabscuttle.github.io/data.html">data page</a> to learn more about the data set.
+               <br><br>
+               We ran our data through multiple machine learning models: Logistic Regression, Random Forest, K Nearest
+               Neighbors, and Support Vector Machine.  We also built a neural network and experimented with K-Means,
+               which is an unsupervised neural network, to see what kind of categories the model would create.  
+               Click on the links above to see more information about each model, or go to the <a href = "https://rabscuttle.github.io/summary.html">Summary</a> page to see the final results.
+             </p>
+          
+            </div>  
           <!-- Data Info Table -->
-          <div class="col-4 offset-1 DataInfo">
+          <div class="col-4 offset-1">
             <h3> Our Data</h3>
 
-            <table class="table table-sm table-bordered" id=DataTable>
+            <table class="table table-sm table-bordered">
               <thead>
                 <tr>
                   <th>Class</th>
@@ -155,100 +168,298 @@
         </div>
         
         <div class="row">
-          <!-- Summary of Results -->
-          <div class="col-6 results">
-            <h3>Summary of Results</h3>
+          <!-- Methods -->
+          <div class="col-6 methods">
+            <h3>Methods</h3>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p>Our data set was very clean to start with, and required minimal upfront processing.  We combined
+               the original data set and the extension data set into one csv file, imported the csv file into a 
+               jupyter notebook, and replaced the index with the Animal Name.  We then split the data into a training 
+               and testing set using train_test_split from Scikit-learn.  In addition to the testing data set, we used 
+               an animal from each category that was not included in the original data set to look at results.
+              <br><br>
+               We spent some time discussing the need to scale our data.  All of our attributes but one are boolean
+               variables (0 or 1 to represent No or Yes), and the remaining attribute, legs, is a number with the limited
+               options of 0,2,4,6, or 8.  We decided to test to see if using a MinMax Scaler would make any difference
+               in our models' success rates.  We ran the models with both the scaled and unscaled data, and the results
+               are indicated on the analysis page for each model.
+              </p><br>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <h3>Training/Testing Data Set Analysis</h3>
+            
+            <p>Chi Square? </p>
+            
           </div> 
           
-          <!-- Character Results Table -->
-          <div class="col-4 offset-1 CharResults">
-            <h3> Character Results</h3>
+          <!-- Attributes Table -->
+          <div class="col-4 offset-1 Attr">
+            <h3> Attributes</h3>
           
-            <table class="table table-sm table-bordered" id=CharTable>
-                        <thead>
-                          <tr>
-                            <th>Character</th>
-                            <th>Log Reg</th>
-                            <th>Ran For</th>
-                            <th>K Near Neigh</th>
-                            <th>SVM</th>
-                            <th>Neural</th>
-                            <th>Deep Neural</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td><img src = "../../resources/kangaroo.jpg"></td>
-                            <td>Mammal</td>
-                            <td>Mammal</td>
-                            <td>Mammal</td>
-                            <td>Mammal</td>
-                            <td>Mammal</td>
-                          </tr>
-                          <tr>
-                            <td><img src = "../../resources/eagle.jpg"></td>
-                            <td>Bird</td>
-                            <td>Bird</td>
-                            <td>Bird</td>
-                            <td>Bird</td>
-                            <td>Bird</td>
-                          </tr>
-                          <tr>
-                            <td><img src = "../../resources/snake.jpg"></td>
-                            <td>Reptile</td>
-                            <td>Reptile</td>
-                            <td>Reptile</td>
-                            <td>Reptile</td>
-                            <td>Reptile</td>
-                          </tr>
-                          <tr>
-                            <td><img src = "../../resources/goldfish.jpg"></td>
-                            <td>Fish</td>
-                            <td>Fish</td>
-                            <td>Fish</td>
-                            <td>Fish</td>
-                            <td>Fish</td>
-                          </tr>
-                          <tr>
-                            <td><img src = "../../resources/frog.jpg"></td>
-                            <td>Amphibian</td>
-                            <td>Amphibian</td>
-                            <td>Amphibian</td>
-                            <td>Amphibian</td>
-                            <td>Amphibian</td>
-                          </tr>
-                          <tr>
-                            <td><img src = "../../resources/moth.jpg"></td>
-                            <td>Bug</td>
-                            <td>Bug</td>
-                            <td>Bug</td>
-                            <td>Bug</td>
-                            <td>Bug</td>
-                          </tr>
-                          <tr>
-                            <td><img src = "../../resources/coral.jpg"></td>
-                            <td>Invertebrate</td>
-                            <td>Invertebrate</td>
-                            <td>Invertebrate</td>
-                            <td>Invertebrate</td>
-                            <td>Amphibian</td>
-                          </tr>
-                          <tr>
-                            <td><img src = "../../resources/seaturtle.jpg"></td>
-                            <td>Fish</td>
-                            <td>Fish</td>
-                            <td>Reptile</td>
-                            <td>Reptile</td>
-                            <td>Reptile</td>
-                          </tr>
-                        </tbody>
-                      </table>
+            <table class="table table-sm table-bordered">
+              <tbody>
+                <tr>
+                  <td>Hair</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Feathers</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Eggs</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Milk</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Airborne</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Aquatic</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Predator</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Toothed</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Backbone</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Breathes</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Venomous</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Fins</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Legs</td>
+                  <td>Number</td>
+                </tr>
+                <tr>
+                  <td>Tail</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>Domestic</td>
+                  <td>Yes/No</td>
+                </tr>
+                <tr>
+                  <td>CatSize</td>
+                  <td>Yes/No</td>
+                </tr>
+              </tbody>
+            </table>
           
-                    </div>   
+          </div>   
+
+        </div>
+
+        <div class="row">
+          <!-- Methods -->
+          <div class="col-6 methods">
+            <h3>Feature Selection</h3>
+
+            <p> Our group decided to run our analysis using all available features because of the small size 
+                data set and the limited number of features (16).  However, to validate this decision, and out 
+                of curiousity to learn more about the predictive power of certain features, we decided to 
+                run two models used for feature selection in categorical data sets.
+                <br><br>
+                The first model is Chi_Squared Feature Selection.  This function is part of the feature_selection
+                module in Scikit-learn.  The chi-squared hypothesis test looks for independence between categorical
+                variables.  For variables with a score greater than the critical value of 12.59, we can reject the null
+                hypothesis that the variables are independent, meaning that the classification is dependent on those features.
+                This is true for all features except the Predator feature or the Domestic feature, which will probably
+                contribute less to the prediction of a model.
+                <br><br>
+
+                The second model, Mutual Information, is also available as part of the feature_selection module
+                in Scikit-learn.  It calculates the reduction in uncertainty for one variable given a known value
+                for another variable. In this case, the larger the score value, the greater the relationship 
+                between the two variables.   
+
+                For both models, the features with the highest scores were Legs, Feathers, and Milk.  The features with
+                the lowest scores were Venomous, Predator, and Domestic.  This may explain in part why our models did
+                worse in their identification of reptiles and invertibrates, as their defining features are not included 
+                in the top features.
+
+              </p>
+            
+          </div> 
+          
+          <!-- Feature Tables -->
+          <div class="col-2 offset-1 Attr">
+            <h3> Chi-Squared </h3>
+          
+            <table class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Legs</td>
+                  <td>149.603</td>
+                </tr>
+                <tr>
+                  <td>Feathers</td>
+                  <td>129.000</td>
+                </tr>
+                <tr>
+                  <td>Milk</td>
+                  <td>118.000</td>
+                </tr>
+                <tr>
+                  <td>Fins</td>
+                  <td>110.925</td>
+                </tr>
+                <tr>
+                  <td>Hair</td>
+                  <td>87.764</td>
+                </tr>
+                <tr>
+                  <td>Airborne</td>
+                  <td>80.176</td>
+                </tr>
+                <tr>
+                  <td>Toothed</td>
+                  <td>56.201</td>
+                </tr>
+                <tr>
+                  <td>Aquatic</td>
+                  <td>50.630</td>
+                </tr>
+                <tr>
+                  <td>Eggs</td>
+                  <td>38.121</td>
+                </tr>
+                <tr>
+                  <td>Tail</td>
+                  <td>36.174</td>
+                </tr>
+                <tr>
+                  <td>Backbone</td>
+                  <td>33.000</td>
+                </tr>
+                <tr>
+                  <td>Catsize</td>
+                  <td>23.363</td>
+                </tr>
+                <tr>
+                  <td>Breathes</td>
+                  <td>21.527</td>
+                </tr>
+                <tr>
+                  <td>Venomous</td>
+                  <td>20.969</td>
+                </tr>
+                <tr>
+                  <td>Predator</td>
+                  <td>7.575</td>
+                </tr>
+                <tr>
+                  <td>Domestic</td>
+                  <td>6.839</td>
+                </tr>
+              </tbody>
+            </table>
+          
+          </div>
+          
+          <div class="col-2 Attr">
+            <h3> Mutual Information </h3>
+          
+            <table class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Legs</td>
+                  <td>0.962</td>
+                </tr>
+                <tr>
+                  <td>Feathers</td>
+                  <td>0.539</td>
+                </tr>
+                <tr>
+                  <td>Milk</td>
+                  <td>0.529</td>
+                </tr>
+                <tr>
+                  <td>Tail</td>
+                  <td>0.493</td>
+                </tr>
+                <tr>
+                  <td>Eggs</td>
+                  <td>0.489</td>
+                </tr>
+                <tr>
+                  <td>Backbone</td>
+                  <td>0.456</td>
+                </tr>
+                <tr>
+                  <td>Toothed</td>
+                  <td>0.423</td>
+                </tr>
+                <tr>
+                  <td>Hair</td>
+                  <td>0.404</td>
+                </tr>
+                <tr>
+                  <td>Breathes</td>
+                  <td>0.395</td>
+                </tr>
+                <tr>
+                  <td>Fins</td>
+                  <td>0.382</td>
+                </tr>
+                <tr>
+                  <td>Airborne</td>
+                  <td>0.323</td>
+                </tr>
+                <tr>
+                  <td>Aquatic</td>
+                  <td>0.294</td>
+                </tr>
+                <tr>
+                  <td>Catsize</td>
+                  <td>0.181</td>
+                </tr>
+                <tr>
+                  <td>Venomous</td>
+                  <td>0.103</td>
+                </tr>
+                <tr>
+                  <td>Domestic</td>
+                  <td>0.100</td>
+                </tr>
+                <tr>
+                  <td>Predator</td>
+                  <td>0.049</td>
+                </tr>
+              </tbody>
+            </table>
+          
+          </div>   
 
         </div>
 
@@ -261,7 +472,7 @@
   <div class="row">
     <div class = "col-12" >
       <div id="footer">
-        <p>Group 10 Final Project - University of Minnesota Data Analytics Bootcamp</p>
+        <p>Group 10 Final Project - University of Minnesota Data Analytics Bootcamp<br>Scott Rehn, Kelli Roddy, Amanda Stambaugh, Katie Welter</p>
       </div>
     </div>
   </div>
