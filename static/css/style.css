@@ -103,6 +103,12 @@ h4 {
   font-weight: bold;
 }
 
+h5 {
+  color: #3d0c02;
+  font-weight: bold;
+}
+
+
 p {
   color: #3d0c02;
   }
@@ -129,11 +135,6 @@ table.table-bordered > tbody > tr > td{
 
 .trfinal {
   font-weight: bold;
-}
-
-.methods {
-  margin-left: 40px;
-  margin-top: 40px;
 }
 
 .Attr {
