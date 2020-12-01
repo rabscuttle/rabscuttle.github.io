@@ -54,7 +54,14 @@
       <div class="col-md-12">
         <h2>Support Vector Machine</h2><br>
         <h4>Explanation of Model</h4>
-        <p>Description
+        <p>Support Vector Machine is a supervised machine learning model.  It finds the hyperplane 
+          with the maximum margin between the data classes in order to predict the classification of new 
+          data points.  
+          <br><br>
+          Because of the variety of parameters used as part of the SVM model, we used the Grid Search
+          module included in Scikit-learn to test different parameter values.  None of the parameters we 
+          tested returned a better score than the defaults of the model.
+          
         </p>
         <hr>
         <h4>Results of Model</h4>
@@ -80,12 +87,146 @@
                 <td>3</td>
               </tr>
           </table>
+
+        </div>
+        <br>
+
+        <div class = "row">
+          <div class="col-4">
+            <h5> Classification Report </h5>
+          
+            <table class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Precision</th>
+                  <th>Recall</th>
+                  <th>F1-Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mammal</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                </tr>
+                <tr>
+                  <td>Bird</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                </tr>
+                <tr>
+                  <td>Reptile</td>
+                  <td>1.00</td>
+                  <td>0.50</td>
+                  <td>0.67</td>
+                </tr>
+                <tr>
+                  <td>Fish</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                </tr>
+                <tr>
+                  <td>Amphibian</td>
+                  <td>0.60</td>
+                  <td>1.00</td>
+                  <td>0.75</td>
+                </tr>
+                <tr>
+                  <td>Bug</td>
+                  <td>0.86</td>
+                  <td>1.00</td>
+                  <td>0.92</td>
+                </tr>
+                <tr>
+                  <td>Invertebrate</td>
+                  <td>1.00</td>
+                  <td>0.83</td>
+                  <td>0.91</td>
+                </tr>
+              </tbody>
+            </table>
+          
+          </div>
+               
+          <div class="col-sm-4 Classification">
+            <h5> Classification Report (Scaled) </h5>
+          
+            <table class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Precision</th>
+                  <th>Recall</th>
+                  <th>F1-Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mammal</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                </tr>
+                <tr>
+                  <td>Bird</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                </tr>
+                <tr>
+                  <td>Reptile</td>
+                  <td>1.00</td>
+                  <td>0.50</td>
+                  <td>0.67</td>
+                </tr>
+                <tr>
+                  <td>Fish</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                  <td>1.00</td>
+                </tr>
+                <tr>
+                  <td>Amphibian</td>
+                  <td>0.60</td>
+                  <td>1.00</td>
+                  <td>0.75</td>
+                </tr>
+                <tr>
+                  <td>Bug</td>
+                  <td>0.86</td>
+                  <td>1.00</td>
+                  <td>0.92</td>
+                </tr>
+                <tr>
+                  <td>Invertebrate</td>
+                  <td>1.00</td>
+                  <td>0.83</td>
+                  <td>0.91</td>
+                </tr>
+              </tbody>
+            </table>
+          <br>
+        </div>
+          
+          <p>For this model, there wasn't much of a difference between the results when the data was scaled.  The 
+            classification report returned the same F1-scores for all classifications.  
+
+          </p>   
+        </div>
+      
+      <br>
+      <hr>  
+      </div>
           
         </div>
         <br>
         <img src = "../../resources/svm.png" width="1100" >
         <img src = "../../resources/svm_res.png" width="1100" >
-        <br><br><br><hr>
+        <br><hr>
         <img src = "../../resources/svm_scaled.png" width="1100" >
         <img src = "../../resources/svm_scaled_res.png" width="1100" >
         
