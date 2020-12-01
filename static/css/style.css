@@ -148,3 +148,7 @@ table.table-bordered > tbody > tr > td{
 #footer {
   text-align: center;
 }
+
+.Classification {
+  margin-left: 80px;
+}

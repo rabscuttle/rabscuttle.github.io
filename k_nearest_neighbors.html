@@ -52,10 +52,22 @@
   <div class="container pt-3">
     <div class="row">
       <div class="col-md-12">
-        <h2>K Nearest Neighbor</h2><br>
+        <h2>K-Nearest Neighbor</h2><br>
         <h4>Explanation of Model</h4>
-        <p>Description
-        </p>
+        <p>K-Nearest Neighbors is a supervised machine learning model.  It predicts the category of a data 
+          point by graphing the known data points, then determining which graphed points are closest to the 
+          unknown data point.  The variable "k" determines how many neighbors the model takes into account - 
+          it then chooses the category of the majority of the neighbors to predict the category of the 
+          unknown data point.  
+          <br><br>
+
+          After running a variety of options for "k", we determined that 11 appears to be the lowest value for
+          "k" where the score is relatively stable.</p>
+
+          <img src = "../../resources/knn_kscores.png" width="450px" >
+
+          <p></p>
+
         <hr>
         <h4>Results of Model</h4>
         <div class="table-responsive table-sm table-striped">
@@ -80,8 +92,145 @@
                 <td>6</td>
               </tr>
           </table>
+          </div>
+          <br>
+
+          <div class = "row">
+            <div class="col-4">
+              <h5> Classification (KNN) </h5>
+            
+              <table class="table table-sm table-bordered">
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>F1-Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mammal</td>
+                    <td>1.00</td>
+                    <td>0.94</td>
+                    <td>0.97</td>
+                  </tr>
+                  <tr>
+                    <td>Bird</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                  </tr>
+                  <tr>
+                    <td>Reptile</td>
+                    <td>1.00</td>
+                    <td>0.50</td>
+                    <td>0.67</td>
+                  </tr>
+                  <tr>
+                    <td>Fish</td>
+                    <td>0.86</td>
+                    <td>1.00</td>
+                    <td>0.92</td>
+                  </tr>
+                  <tr>
+                    <td>Amphibian</td>
+                    <td>0.50</td>
+                    <td>1.00</td>
+                    <td>0.67</td>
+                  </tr>
+                  <tr>
+                    <td>Bug</td>
+                    <td>0.75</td>
+                    <td>1.00</td>
+                    <td>0.86</td>
+                  </tr>
+                  <tr>
+                    <td>Invertebrate</td>
+                    <td>1.00</td>
+                    <td>0.50</td>
+                    <td>0.67</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+            </div>
+            
+            <div class="col-sm-4 Classification">
+              <h5> Classification (KNN - Scaled) </h5>
+            
+              <table class="table table-sm table-bordered">
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>F1-Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mammal</td>
+                    <td>1.00</td>
+                    <td>0.94</td>
+                    <td>0.97</td>
+                  </tr>
+                  <tr>
+                    <td>Bird</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                  </tr>
+                  <tr>
+                    <td>Reptile</td>
+                    <td>1.00</td>
+                    <td>0.50</td>
+                    <td>0.67</td>
+                  </tr>
+                  <tr>
+                    <td>Fish</td>
+                    <td>0.86</td>
+                    <td>1.00</td>
+                    <td>0.92</td>
+                  </tr>
+                  <tr>
+                    <td>Amphibian</td>
+                    <td>0.60</td>
+                    <td>1.00</td>
+                    <td>0.75</td>
+                  </tr>
+                  <tr>
+                    <td>Bug</td>
+                    <td>0.75</td>
+                    <td>1.00</td>
+                    <td>0.86</td>
+                  </tr>
+                  <tr>
+                    <td>Invertebrate</td>
+                    <td>1.00</td>
+                    <td>0.67</td>
+                    <td>0.80</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+            </div>   
+          </div>
+
+          <div class = "row">
+            <div class="col-md-12">
+              <br>
+              <p> It appears that the K-Nearest Neighbor model does slightly better with the data when it is
+                scaled.  The overall training and testing scores are better, and it returns a better F1-score 
+                for both amphibians and invertebrates, which our two categories that most models have more 
+                trouble predicting.
+              </p>
+
+            </div>
+          </div>
+
+          <hr>
           
-        </div>
         <br>
         <img src = "../../resources/knn.png" width="1100" >
         <img src = "../../resources/knn_residual.png" width="1100" >
