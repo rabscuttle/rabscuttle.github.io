@@ -53,59 +53,11 @@
       <div class="col-md-12">
         <h2>Summary</h2>
         <h4>Our Best Model</h4>
-        <p>Some BS here to explain our best model</p><br><br>
-        <h4>Our Data</h4>
+        <p>Some stuff here to explain our best model</p><br><br>
+        <h4>Animals used for Predictions</h4>
         <p>Some stuff here.</p>
         <div class="row">
-        <div class="col-md-3">
-          <h6>Our Class Counts</h6>
-          <div class="table-responsive table-sm table-striped">
-            <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Class</th>          
-                  <th scope="col">Count</th>
-                </tr>
-              </thead>
-          <tbody>
-            <tr>
-              <td>Mammal</td>
-              <td>59</td>
-            </tr>
-            <tr>
-              <td>Bird</td>
-              <td>40</td>
-            </tr>
-            <tr>
-              <td>Fish</td>
-              <td>28</td>
-            </tr>
-            <tr>
-              <td>Bug</td>
-              <td>25</td>
-            </tr>
-            <tr>
-              <td>Reptile</td>
-              <td>24</td>
-            </tr>
-            <tr>
-              <td>Invertebrate</td>
-              <td>20</td>
-            </tr>
-            <tr>
-              <td>Amphibian</td>
-              <td>16</td>
-            </tr>
-            <tr class=trfinal>
-              <td>Total</td>
-              <td>212</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-     </div>
-     <div class="col-md-9">
-      <h6>Our animals used for predictions</h6>
+        <div class="col-md-12">
       <div class="table-responsive table-sm table-striped">
         <table class="table">
           <thead class="thead-dark">
@@ -121,7 +73,7 @@
           </thead>
       <tbody>
         <tr>
-          <td>Kangaroo</td>
+          <td><img src = "../../resources/kangaroo.jpg"></td>
           <td>Mammal</td>
           <td>Mammal</td>
           <td>Mammal</td>
@@ -130,7 +82,7 @@
           <td>Mammal</td>
         </tr>
         <tr>
-          <td>Eagle</td>
+          <td><img src = "../../resources/eagle.jpg"></td>
           <td>Bird</td>
           <td>Bird</td>
           <td>Bird</td>
@@ -139,7 +91,7 @@
           <td>Bird</td>
         </tr>
         <tr>
-          <td>Rattle Snake</td>
+          <td><img src = "../../resources/snake.jpg"></td>
           <td>Reptile</td>
           <td>Reptile</td>
           <td>Reptile</td>
@@ -148,7 +100,7 @@
           <td>Reptile</td>
         </tr>
         <tr>
-          <td>Goldfish</td>
+          <td><img src = "../../resources/goldfish.jpg"></td>
           <td>Fish</td>
           <td>Fish</td>
           <td>Fish</td>
@@ -157,7 +109,7 @@
           <td>Fish</td>
         </tr>
         <tr>
-          <td>Mountain Chicken Frog</td>
+          <td><img src = "../../resources/frog.jpg"></td>
           <td>Amphibian</td>
           <td>Amphibian</td>
           <td>Amphibian</td>
@@ -166,7 +118,7 @@
           <td>Amphibian</td>
         </tr>
         <tr>
-          <td>Vampire Moth</td>
+          <td><img src = "../../resources/moth.jpg"></td>
           <td>Bug</td>
           <td>Bug</td>
           <td>Bug</td>
@@ -175,7 +127,7 @@
           <td>Bug</td>
         </tr>
         <tr>
-          <td>Coral</td>
+          <td><img src = "../../resources/coral.jpg"></td>
           <td>Invertrbrate</td>
           <td>Invertrbrate</td>
           <td>Invertrbrate</td>
@@ -184,7 +136,7 @@
           <td>Amphibian</td>
         </tr>
         <tr>
-          <td>Sea Turtle</td>
+          <td><img src = "../../resources/seaturtle.jpg"></td>
           <td>Repile</td>
           <td>Fish</td>
           <td>Fish</td>
@@ -199,7 +151,9 @@
   <div class="container pt-3">
   <div class="row">
   <div class="col-md-12"><hr>
-  <br><h5>Classification Models</h5>
+  <h4>Our Results</h4>
+  <p>Something here as well.</p>
+  <h5>Classification Models</h5>
   <div class="table-responsive table-sm table-striped">
     <table class="table">
       <thead class="thead-dark">
@@ -262,8 +216,10 @@
             <th scope="col">Model</th>          
             <th scope="col">Loss</th>
             <th scope="col">Accuracy</th>
+            <th scope="col">Incorrect</th>
             <th scope="col">Scaled Loss</th>
             <th scope="col">Scaled Accuracy</th>
+            <th scope="col">Scaled Incorrect</th>
           </tr>
         </thead>
         <tbody>
@@ -271,15 +227,19 @@
             <td>Nerual Network</td>
             <td>0.1594</td>
             <td>0.9623</td>
+            <td>2</td>
             <td>0.1486</td>
             <td>0.9623</td>
+            <td>16</td>
             </tr>
             <tr>
             <td>Deep Nerual Network</td>
             <td>0.3654</td>
             <td>0.9623</td>
+            <td>-</td>
             <td>0.2109</td>
             <td>0.9434</td>
+            <td>-</td>
       </table>
     </div>
 </div>
