@@ -49,7 +49,41 @@
 
 <!-- Body -->
 <body>
+  <div class="container pt-3">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Unsupervised K-Means</h2>
+        <h4>Explanation of Model</h4>
 
+        <p>K-means is an unsupervised learning algorithm and is sometimes referred to as Lloyd’s algorithm or "naive k-means".  This machine learning model is typically used with unlabeled or unclustered data. The purpose of the K-means is to identify groups or “clusters” in the data. The number of clusters the model will identify is represented by K and requires the number of clusters to be specified. The algorithm assigns each data point to one of the K groups based on the features in the data set. Data points are clustered based on feature similarity. Typically, K-means is used with unlabeled data, we wanted to see if a k-means model could successfully place animals in the appropriate classes with the features provided. The steps to using this model were:
+        </p>
+        <ol>
+          <li>Select number of clusters (K = 7)</li>
+          <li>Fit the model to the data</li>
+          <li>Predict the clusters</li>
+        </ol>
+        <h4>Principle Component Analysis (PCA)</h4>
+        <p>Plotting clusters became a challenge, as we had more than 2 features to visualize on a scatter plot. Therefore, we ran a principal component analysis (PCA).  A PCA reduces the number of variables of a data set, while preserving as much information as possible. In other words, PCA can take a large number of features and reduce them to a number that can be plotted.  We used the PCA to reduce our 16 features and then plotted the following visualizations:        
+        </p>
+        <ol>
+          <li>1-D Visualization: Displays our clusters on one principal component</li>
+          <li>2-D Visualizations: Displays our clusters on two principal components</li>
+          <li>3-D Visualizations: Displays our clusters on three principal components</li>
+        </ol>
+        <hr>
+        <h4>Results of Model</h4>
+        <div class="table-responsive table-sm table-striped">
+          <br>
+          <h4>1-D Plot</h4>
+          <center><img src = "../../resources/1d.png" width="600"></center>
+          <br><br><br><hr>
+          <h4>2-D Plot</h4>
+          <center><img src = "../../resources/2d.png" width="600"></center>
+          <br><br><br><hr>
+          <h4>3-D Plot</h4>
+          <center><img src = "../../resources/3d.png" width="600"></center>
+  
+         
   <!-- Footer  -->
   <div class="row">
     <div class = "col-12" >
