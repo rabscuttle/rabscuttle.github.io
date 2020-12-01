@@ -1,9 +1,9 @@
-﻿Character,Actual,Logistical Regression,Random Forest,K Nearest Neighbors,SVM,Neural Netwrok,Deep Neural Network
+Character,Logistical Regression,Random Forest,KNN,SVM,Neural Network,Deep Neural Network,Unsupervised K-Means
 Kangaroo,Mammal,Mammal,Mammal,Mammal,Mammal,Mammal,Mammal
-Eagle,Bird,Bird,Bird,Bird,Bird,Bird,Bird
-Rattle Snake,Reptile,Reptile,Reptile,Reptile,Reptile,Reptile,Reptile
-Goldfish,Fish,Fish,Fish,Fish,Fish,Fish,Fish
-Mountain Chicken Frog,Amphibian,Amphibian,Amphibian,Amphibian,Amphibian,Amphibian,Amphibian
+Bald Eagle,Bird,Bird,Bird,Bird,Bird,Bird,Bird
+Rattle Snake,Reptile,Reptile,Reptile,Reptile,Reptile,Reptile,Reptile and Invertebrate
+Gold Fish,Fish,Fish,Fish,Fish,Fish,Fish,Fish
+Mountain Chicken Frog,Amphibian,Amphibian,Amphibian,Amphibian,Amphibian,Amphibian,Amphibian and Reptile
 Vampire Moth,Bug,Bug,Bug,Bug,Bug,Bug,Bug
-Coral,Invertrbrate,Invertrbrate,Invertrbrate,Invertrbrate,Invertrbrate,Amphibian,Amphibian
-Sea Turtle,Reptile,Fish,Fish,Reptile,Reptile,Reptile,Reptile
+Coral,Invertabrate,Invertabrate,Invertabrate,Invertabrate,Invertabrate,Invertabrate,Reptile and Invertebrate
+Sea Turtle,Reptile,Fish,Fish,Reptile,Reptile,Reptile,Amphibian and Reptile
