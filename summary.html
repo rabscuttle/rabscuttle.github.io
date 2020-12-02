@@ -52,55 +52,91 @@
     <div class="row">
       <div class="col-md-12">
         <h2>Summary</h2>
-        <h4>Our Best Model</h4>
-        <p>Some stuff here to explain our best model</p><br><br>
+        <h4>Cast of Characters </h4>
+        <p>After running all of the models we decided to put additional animals or a “Cast of Characters” 
+          through each model to see if they could correctly be identified, so we added an additional animal 
+          from each of the seven classes.  In addition, as we reviewed the models, we began to notice the 
+          models were struggling to identify invertebrates and reptiles.  More specifically, the models
+          consistently had trouble identifying turtles.  Therefore we added an additional 
+          reptile, a sea turtle, to our cast of characters to see how the model would identify another 
+          turtle.  The K-Nearest Neighbors, Support Vector Machine and Neural Network successfully identified 
+          the sea turtle as a reptile.  While the Logistical Regression and the Random Forest identified it as 
+          a fish.  See full results from our cast of characters in the first table below.
+        </p>
+        <h4>Our Best Model - Random Forest </h4>
+        <p>A second table below displays training and testing scores as well as the number of animals 
+          identified incorrectly for Logistic Regression, Random Forest, K Nearest Neighbors, and 
+          Support Vector Machine.  A third table displays the results for the neural network and 
+          deep neural networks. As you can see, all of the models performed well, however, the 
+          <a href="/random_forest.html">Random Forest</a> model resulted in the fewest numbers of animals being classified incorrectly.  
+          In addition, the training and testing scores were slightly higher than the rest of the models. 
+          Therefore, despite the fact the Random Forest failed to identify our sea turtle as a reptile 
+          (or any turtle as a reptile), we all agreed the Random Forest was our best machine learning model 
+          to categorize this data set. </p>
+          <h4>Improving our Predictions </h4>
+          <p>When reviewing the data set used in the project, it was clear why the models struggled 
+            most often with invertebrates, amphibians and reptiles.  The data set contained only 16 
+            amphibians, 20 invertebrates and 24 reptiles.  In comparison to the 59 mammals and 40 birds. 
+            Accuracy of all of the models could be improved by adding additional reptiles, amphibians and 
+            reptiles to the dataset.  And just to be sure, the additions to the data set should include a 
+            variety of turtles.<img src = "../../resources/turtle.png" class="mx-auto turtle" align="right"/></p>
+        <hr>
         <h4>Animals used for Predictions</h4>
-        <p>Some stuff here.</p>
         <div class="row">
         <div class="col-md-12">
       <div class="table-responsive table-sm table-striped">
         <table class="table">
           <thead class="thead-dark">
             <tr>
-              <th scope="col">Animal</th>          
+              <th scope="col">Character</th>          
               <th scope="col">Actual</th>
               <th scope="col">Logistical Regression</th>          
               <th scope="col">Random Forest</th>
               <th scope="col">K Nearest Neighbors</th>          
               <th scope="col">Support Vector Machine</th>
-              <th scope="col">Neural Netwrok</th>
+              <th scope="col">Neural Network</th>
+              <th scope="col">Deep Neural Network</th>
+              <th scope="col">Unsupervised K-Means</th>
             </tr>
           </thead>
       <tbody>
         <tr>
-          <td><img src = "../../resources/kangaroo.jpg"></td>
+          <td><img src = "../../resources/kangaroo.jpg"><figcaption style="font-size:9px">Kangaroo</figcaption></td>
           <td>Mammal</td>
           <td>Mammal</td>
           <td>Mammal</td>
           <td>Mammal</td>
           <td>Mammal</td>
           <td>Mammal</td>
+          <td>Mammal</td>
+          <td>Mammal</td>
         </tr>
         <tr>
-          <td><img src = "../../resources/eagle.jpg"></td>
+          <td><img src = "../../resources/eagle.jpg"><figcaption style="font-size:9px">Eagle</figcaption></td>
           <td>Bird</td>
           <td>Bird</td>
           <td>Bird</td>
           <td>Bird</td>
           <td>Bird</td>
           <td>Bird</td>
+          <td>Bird</td>
+          <td>Bird</td>
         </tr>
         <tr>
-          <td><img src = "../../resources/snake.jpg"></td>
+          <td><img src = "../../resources/snake.jpg"><figcaption style="font-size:9px">Snake</figcaption></td>
           <td>Reptile</td>
           <td>Reptile</td>
           <td>Reptile</td>
           <td>Reptile</td>
           <td>Reptile</td>
           <td>Reptile</td>
+          <td>Reptile</td>
+          <td>Reptile and Invertebrate</td>
         </tr>
         <tr>
-          <td><img src = "../../resources/goldfish.jpg"></td>
+          <td><img src = "../../resources/goldfish.jpg"><figcaption style="font-size:9px">Goldfish</figcaption></td>
+          <td>Fish</td>
+          <td>Fish</td>
           <td>Fish</td>
           <td>Fish</td>
           <td>Fish</td>
@@ -109,16 +145,20 @@
           <td>Fish</td>
         </tr>
         <tr>
-          <td><img src = "../../resources/frog.jpg"></td>
+          <td><img src = "../../resources/frog.jpg"><figcaption style="font-size:9px">Mountain Chicken Frog</figcaption></td>
           <td>Amphibian</td>
           <td>Amphibian</td>
           <td>Amphibian</td>
           <td>Amphibian</td>
           <td>Amphibian</td>
           <td>Amphibian</td>
+          <td>Amphibian</td>
+          <td>Amphibian and Reptile</td>
         </tr>
         <tr>
-          <td><img src = "../../resources/moth.jpg"></td>
+          <td><img src = "../../resources/moth.jpg"><figcaption style="font-size:9px">Vampire Moth</figcaption></td>
+          <td>Bug</td>
+          <td>Bug</td>
           <td>Bug</td>
           <td>Bug</td>
           <td>Bug</td>
@@ -127,22 +167,26 @@
           <td>Bug</td>
         </tr>
         <tr>
-          <td><img src = "../../resources/coral.jpg"></td>
-          <td>Invertrbrate</td>
-          <td>Invertrbrate</td>
-          <td>Invertrbrate</td>
-          <td>Invertrbrate</td>
+          <td><img src = "../../resources/coral.jpg"><figcaption style="font-size:9px">Coral</figcaption></td>
+          <td>Invertebrate</td>
+          <td>Invertebrate</td>
+          <td>Invertebrate</td>
+          <td>Invertebrate</td>
           <td>Amphibian</td>
           <td>Amphibian</td>
+          <td>Invertebrate</td>
+          <td>Reptile and Invertebrate</td>
         </tr>
         <tr>
-          <td><img src = "../../resources/seaturtle.jpg"></td>
-          <td>Repile</td>
+          <td><img src = "../../resources/seaturtle.jpg"><figcaption style="font-size:9px">Sea Turtle</figcaption></td>
+          <td>Reptile</td>
           <td>Fish</td>
           <td>Fish</td>
-          <td>Repitle</td>
-          <td>Repitle</td>
-          <td>Repitle</td>
+          <td>Reptile</td>
+          <td>Reptile</td>
+          <td>Reptile</td>
+          <td>Reptile</td>
+          <td>Reptile and Amphibian</td>
         </tr>
       </tbody>
     </table>
@@ -152,7 +196,6 @@
   <div class="row">
   <div class="col-md-12"><hr>
   <h4>Our Results</h4>
-  <p>Something here as well.</p>
   <h5>Classification Models</h5>
   <div class="table-responsive table-sm table-striped">
     <table class="table">
@@ -181,9 +224,9 @@
           <td>Random Forest</td>
           <td>0.987421384</td>
           <td>0.962264151</td>
-          <td>1</td>
+          <td>2</td>
           <td>0.987421384</td>
-          <td>0.962264151</td>
+          <td>0.943396226</td>
           <td>2</td>
           </tr>
           <tr>
@@ -207,8 +250,8 @@
     </table>
   </div>
   <div class="row">
-    <div class="col-md-12"><hr>
-    <br><h5>Neural Networks</h5>
+    <div class="col-md-12">
+    <br><h5>Nerual Networks</h5>
     <div class="table-responsive table-sm table-striped">
       <table class="table">
         <thead class="thead-dark">
@@ -250,21 +293,15 @@
   <div class="row">
     <div class = "col-12" >
       <div id="footer">
-        <p>Group 10 Final Project - University of Minnesota Data Analytics Bootcamp</p>
+        <p>Group 10 Final Project - University of Minnesota Data Analytics Bootcamp<br>Scott Rehn, Kelli Roddy, Amanda Stambaugh, Katie Welter</p></p>
       </div>
     </div>
   </div>
-  
-  <!-- D3 -->
-  <script src="https://d3js.org/d3.v5.js"></script>
 
-  <!-- Our JavaScript -->
-  <script type="text/javascript" src="../static/js/logic.js"></script>
-  
-  <!-- Bootstrap Javascript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- Bootstrap Javascript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 
 </html>

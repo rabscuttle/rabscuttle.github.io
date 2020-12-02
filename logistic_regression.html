@@ -52,9 +52,12 @@
   <div class="container pt-3">
     <div class="row">
       <div class="col-md-12">
-        <h2>Logistic Regression</h2>
+        <h2>Logistic Regression</h2><br>
         <h4>Explanation of Model</h4>
-        <p>Logistic Regression is a type of Machine Learning Classification used to identify data with one predefined label based on the features available. Because our data had 16 features, our first attempt at Machine Learning was to use Multiple Linear Regression. With Scikit-learn, we:
+        <p>Logistic Regression is a type of Machine Learning Classification used to identify data with 
+          one predefined label based on the features available. Because our data had 16 features, 
+          our first attempt at Machine Learning was to use Multiple Linear Regression. With Scikit-learn, 
+          we:
         </p>
         <ol>
           <li>Split our data into a training set and a testing set</li>
@@ -62,9 +65,11 @@
           <li>Fit our model</li>
           <li>Scored our model</li>
         </ol>
-        <p>We then went through this process again after we transformed the data using MinMaxScaler, which scales and translates each feature individually within the given training set.
-        </p>
-        <p>We finished our logistic regression model with residual plots. Because we have more than three features, we can’t easily visualize our data using a scatter plot graph.  Using a residual plot we can check our predictions.            
+          <p>We then went through this process again after we transformed the data using MinMaxScaler, 
+            which scales and translates each feature individually within the given training set.</p>
+          <p>We finished our logistic regression model with residual plots. Because we have more than 
+            three features, we can’t easily visualize our data using a scatter plot graph. Using a 
+            residual plot we can check our predictions.</p>
         </p>
         <hr>
         <h4>Results of Model</h4>
@@ -90,39 +95,159 @@
                 <td>8</td>
               </tr>
           </table>
-          
-        </div>
-        <br>
-        <img src = "../../resources/logreg.png" width="1100" >
-        <img src = "../../resources/residual.png" width="1100" >
-        <br><br><br><hr>
-        <img src = "../../resources/minmaxlogreg.png" width="1100" >
-        <img src = "../../resources/minmaxresidual.png" width="1100" >
-        
-        </div>
+          </div>
+          <br>
+
+          <div class = "row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+              <h5> Classification Report </h5>
+              <table class="table table-sm table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Feature</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>F1-Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mammal</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                  </tr>
+                  <tr>
+                    <td>Bird</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                  </tr>
+                  <tr>
+                    <td>Reptile</td>
+                    <td>1.00</td>
+                    <td>0.50</td>
+                    <td>0.67</td>
+                  </tr>
+                  <tr>
+                    <td>Fish</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                  </tr>
+                  <tr>
+                    <td>Amphibian</td>
+                    <td>0.60</td>
+                    <td>1.00</td>
+                    <td>0.75</td>
+                  </tr>
+                  <tr>
+                    <td>Bug</td>
+                    <td>0.75</td>
+                    <td>1.00</td>
+                    <td>0.86</td>
+                  </tr>
+                  <tr>
+                    <td>Invertebrate</td>
+                    <td>1.00</td>
+                    <td>0.67</td>
+                    <td>0.80</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+            </div>
+            <p style="text-align:right"><img src = "../../resources/turtle.png" class="mx-auto turtle"></p>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+              <h5> Classification Report (Scaled) </h5>
+            
+              <table class="table table-sm table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Feature</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>F1-Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mammal</td>
+                    <td>1.00</td>
+                    <td>0.89</td>
+                    <td>0.94</td>
+                  </tr>
+                  <tr>
+                    <td>Bird</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                  </tr>
+                  <tr>
+                    <td>Reptile</td>
+                    <td>1.00</td>
+                    <td>0.25</td>
+                    <td>0.40</td>
+                  </tr>
+                  <tr>
+                    <td>Fish</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                  </tr>
+                  <tr>
+                    <td>Amphibian</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                  </tr>
+                  <tr>
+                    <td>Bug</td>
+                    <td>0.43</td>
+                    <td>1.00</td>
+                    <td>0.60</td>
+                  </tr>
+                  <tr>
+                    <td>Invertebrate</td>
+                    <td>1.00</td>
+                    <td>0.50</td>
+                    <td>0.67</td>
+                  </tr>
+                </tbody>
+              </table>
+            <br>
+            </div>
+          <p>The scaled model performed better than the unscaled model.  The unscaled model also had 
+            twice as many incorrect predictions as the scaled model.</p>   
+          </div>
+        <hr>  
+      </div>
+    </div>
+    <img src = "../../resources/logreg.png" width="1100" >
+    <img src = "../../resources/residual.png" width="1100" ><br><br><br><br><br>
+    <img src = "../../resources/minmaxlogreg.png" width="1100" >
+    <img src = "../../resources/minmaxresidual.png" width="1100" >
+    </div> 
+    </div>
     </div>
   </div>
 
-  
   <!-- Footer  -->
   <div class="row">
     <div class = "col-12" >
       <div id="footer">
-        <p>Group 10 Final Project - University of Minnesota Data Analytics Bootcamp</p>
+        <p>Group 10 Final Project - University of Minnesota Data Analytics Bootcamp<br>
+          Scott Rehn, Kelli Roddy, Amanda Stambaugh, Katie Welter</p>
       </div>
     </div>
   </div>
 
-  <!-- D3 -->
-  <script src="https://d3js.org/d3.v5.js"></script>
-
-  <!-- Our JavaScript -->
-  <script type="text/javascript" src="../static/js/logic.js"></script>
-  
-  <!-- Bootstrap Javascript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- Bootstrap Javascript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 
 </html>
