@@ -55,20 +55,34 @@
         <h2>Unsupervised K-Means</h2>
         <h4>Explanation of Model</h4>
 
-        <p>K-means is an unsupervised learning algorithm and is sometimes referred to as Lloyd’s algorithm or "naive k-means".  This machine learning model is typically used with unlabeled or unclustered data. The purpose of the K-means is to identify groups or “clusters” in the data. The number of clusters the model will identify is represented by K and requires the number of clusters to be specified. The algorithm assigns each data point to one of the K groups based on the features in the data set. Data points are clustered based on feature similarity. Typically, K-means is used with unlabeled data, we wanted to see if a k-means model could successfully place animals in the appropriate classes with the features provided. The steps to using this model were:
+        <p>K-means is an unsupervised learning algorithm and is sometimes referred to as Lloyd’s algorithm or 
+          "naive k-means".  This machine learning model is typically used with unlabeled or unclustered data. 
+          The purpose of the K-means is to identify groups or “clusters” in the data. The number of clusters 
+          the model will identify is represented by K and requires the number of clusters to be specified. 
+          The algorithm assigns each data point to one of the K groups based on the features in the data set. 
+          Data points are clustered based on feature similarity. Typically, K-means is used with unlabeled 
+          data, but we wanted to see if a k-means model could successfully place animals in the appropriate 
+          classes with the features provided. The steps to using this model were:
         </p>
         <ol>
           <li>Select number of clusters (K = 7)</li>
           <li>Fit the model to the data</li>
           <li>Predict the clusters</li>
         </ol>
-        <p>Samples of the output from K-means are displayed below.  As you can see, the model frequently clustered mammals correclty and struggled most often with invertebrates, reptiles and amphibians.
+        <p>Samples of the output from K-means are displayed below.  As you can see, the model frequently 
+          clustered mammals correclty and struggled most often with invertebrates, reptiles and amphibians.
         </p>
-        </ol>
-        <img src = "../../resources/kmeans_mammals.PNG" width="200">&nbsp &nbsp &nbsp<img src = "../../resources/kmeans_bugs.PNG" width="220"> &nbsp &nbsp &nbsp<img src = "../../resources/kmeans_amph.PNG" width="240">
-        </ol>
-        <br><br><h4>Principle Component Analysis (PCA)</h4>
-        <p>Plotting clusters became a challenge, as we had more than 2 features to visualize on a scatter plot. Therefore, we ran a principal component analysis (PCA).  A PCA reduces the number of variables of a data set, while preserving as much information as possible. It does this by combining our input variables in a specific way  to create new variables. Because of the way the new variables are combined, we can drop the least important variables while still retaining the most valuable parts of all of the variables.  We used the PCA to reduce our 16 features and then plotted the following visualizations:      
+        <p style="margin-left: 80px;"><img src = "../../resources/kmeans_mammals.PNG" width="200">&nbsp &nbsp &nbsp
+          <img src = "../../resources/kmeans_bugs.PNG" width="220"> &nbsp &nbsp &nbsp
+          <img src = "../../resources/kmeans_amph.PNG" width="240"></p>
+        <br><h4>Principle Component Analysis (PCA)</h4>
+        <p>Plotting clusters became a challenge, as we had more than two features to visualize on a 
+          scatter plot. Therefore, we ran a principal component analysis (PCA).  A PCA reduces the 
+          number of variables of a data set, while preserving as much information as possible. It does 
+          this by combining our input variables in a specific way  to create new variables. Because of 
+          the way the new variables are combined, we can drop the least important variables while still 
+          retaining the most valuable parts of all of the variables.  We used the PCA to reduce our 16 
+          features and then plotted the following visualizations:      
         </p>
         <ol>
           <li>1-D Visualization: Displays our clusters on one principal component</li>
@@ -89,15 +103,14 @@
           <center><img src = "../../resources/3d.png" width="600"></center>
         </div>
        </div>
-    </div>
-  </div>
+    </div>  
   
-  <br><br><br><hr>
          
   <!-- Footer  -->
   <div class="row">
     <div class = "col-12" >
       <div id="footer">
+        <br><br><br><hr>
         <p>Group 10 Final Project - University of Minnesota Data Analytics Bootcamp<br>Scott Rehn, Kelli Roddy, Amanda Stambaugh, Katie Welter</p>
       </div>
     </div>
