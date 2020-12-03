@@ -62,7 +62,69 @@
 		  <li>Complied and fit the model</li>
 		  <li>Calculated loss and accuracy of the model</li>
 		</ol>
-		 <p></p>
+		<p>We weren't sure whether or not to scale our data since it was already all numbers. 
+       To be thorough, we tested both the Standard and MinMax scaling as well as unscaled data.
+    </p>
+    <hr>
+    <h4>Results of Model</h4>
+    <div class="row">
+      <div class="col-md-12">
+      <br>
+      <div class="table-responsive table-sm table-striped">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Model</th>          
+              <th scope="col">Loss</th>
+              <th scope="col">Accuracy</th>
+              <th scope="col">Incorrect</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Neural Network (Unscaled)</td>
+              <td>0.2149</td>
+              <td>0.9623</td>
+              <td>2</td>
+              </tr>
+              <tr>
+              <td>Neural Network (Standard Scaling)</td>
+              <td>0.4126</td>
+              <td>0.9623</td>
+              <td>2</td>
+              </tr>
+              <tr>
+              <td>Neural Network (MinMax Scaling)</td>
+              <td>0.2647</td>
+              <td>0.9434</td>
+              <td>3</td>
+              </tr>
+              <tr>
+              <td>Deep Neural Network (Unscaled)</td>
+              <td>0.2965</td>
+              <td>0.9623</td>
+              <td>2</td>
+              </tr>
+              <tr>
+              <td>Deep Neural Network (Standard Scaling)</td>
+              <td>0.3709</td>
+              <td>0.9623</td>
+              <td>2</td>
+              </tr>
+              <tr>
+              <td>Deep Neural Network (Standard Scaling)</td>
+              <td>0.2974</td>
+              <td>0.9434</td>
+              <td>3</td>
+              </tr>          
+        </table>
+        <br>
+        <p>The results for all 6 combinations of models turned out very similar - with a high degree of accuracy.
+          The most accurate model seemed to be the one using unscaled data. All of the models had a hard time identifying
+          turtles. The MinMax model was unable to classy the spider correctly.
+        </p>
+      </div>
+  
 		 <img src = "../../resources/neural_network.png" width="1100" >
 		 <img src = "../../resources/deep_neural_network.png" width="1100" >
 	  </div>
