@@ -260,29 +260,45 @@
             <th scope="col">Loss</th>
             <th scope="col">Accuracy</th>
             <th scope="col">Incorrect</th>
-            <th scope="col">Scaled Loss</th>
-            <th scope="col">Scaled Accuracy</th>
-            <th scope="col">Scaled Incorrect</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Nerual Network</td>
-            <td>0.1594</td>
+            <td>Neural Network (Unscaled)</td>
+            <td>0.2149</td>
             <td>0.9623</td>
             <td>2</td>
-            <td>0.1486</td>
-            <td>0.9623</td>
-            <td>16</td>
             </tr>
             <tr>
-            <td>Deep Nerual Network</td>
-            <td>0.3654</td>
+            <td>Neural Network (Standard Scaling)</td>
+            <td>0.4126</td>
             <td>0.9623</td>
-            <td>-</td>
-            <td>0.2109</td>
+            <td>2</td>
+            </tr>
+            <tr>
+            <td>Neural Network (MinMax Scaling)</td>
+            <td>0.2647</td>
             <td>0.9434</td>
-            <td>-</td>
+            <td>3</td>
+            </tr>
+            <tr>
+            <td>Deep Neural Network (Unscaled)</td>
+            <td>0.2965</td>
+            <td>0.9623</td>
+            <td>2</td>
+            </tr>
+            <tr>
+            <td>Deep Neural Network (Standard Scaling)</td>
+            <td>0.3709</td>
+            <td>0.9623</td>
+            <td>2</td>
+            </tr>
+            <tr>
+            <td>Deep Neural Network (Standard Scaling)</td>
+            <td>0.2974</td>
+            <td>0.9434</td>
+            <td>3</td>
+            </tr>          
       </table>
     </div>
 </div>
