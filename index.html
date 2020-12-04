@@ -87,7 +87,7 @@
              <p class="animal"> Sea Turtle <br><br></p>
           </div>
         </div>
-        <p class=sidetext> <a href = "https://github.com/rabscuttle/rabscuttle.github.io">Link</a> to our repository on GitHub</p>  
+        <p class=sidetext> <a href = "https://github.com/rabscuttle/rabscuttle.github.io" target="_blank">Link</a> to our repository on GitHub</p>  
 
       </aside>
 
@@ -109,12 +109,12 @@
                predict the classification of an animal based on various provided attributes.  Our data comes from the 
                Zoo Data Set that is part of the UCI Machine Learning repository.  It is a combination of the original
                data set along with an extension data set to add additional animals, for a total of 212 distinct animals.
-               Visit our <a href = "https://rabscuttle.github.io/data.html">data page</a> to learn more about the data set.
+               Visit our <a href="data.html">data page</a> to learn more about the data set.
                <br><br>
                We ran our data through multiple machine learning models: Logistic Regression, Random Forest, K Nearest
                Neighbors, and Support Vector Machine.  We also built a neural network and experimented with K-Means,
                which is an unsupervised neural network, to see what kind of categories the model would create.  
-               Click on the links above to see more information about each model, or go to the <a href = "https://rabscuttle.github.io/summary.html">Summary</a> page to see the final results.
+               Click on the links above to see more information about each model, or go to the <a href = "summary.html">Summary</a> page to see the final results.
              </p>
           
             </div>  
@@ -193,7 +193,7 @@
               test.  For each of the training and testing sets, we compared the actual number of animals in each class (as 
               calculated by Scikit-learn) to the expected count (which would be 75% of the number in the overall data set 
               for the training set, and 25% of the overall number for the testing set).  The p-values for the training and testing 
-              sets were both well over 0.05, which means we are unable to reject the null hypothesis that the there is 
+              sets were both well over 0.05, which means we are unable to reject the null hypothesis that there is 
               no statistical significance between the actual and expected data sets.
             </p>
 
@@ -393,7 +393,7 @@
 
             <p> Our group decided to run our analysis using all available features because of the small size 
                 data set and the limited number of features (16).  However, to validate this decision, and out 
-                of curiousity to learn more about the predictive power of certain features, we decided to 
+                of curiosity to learn more about the predictive power of certain features, we decided to 
                 run two models used for feature selection in categorical data sets.
                 <br><br>
                 The first model is Chi-Squared Feature Selection.  This function is part of the feature_selection
@@ -411,7 +411,7 @@
 
                 For both models, the features with the highest scores were Legs, Feathers, and Milk.  The features with
                 the lowest scores were Venomous, Predator, and Domestic.  This may explain in part why our models did
-                worse in their identification of reptiles and invertibrates, as their defining features are not included 
+                worse in their identification of reptiles and invertebrates, as their defining features are not included 
                 in the top features.
 
                 For this dataset, we were unsure of the exact definition of one attribute, "catsize".  For this reason,
