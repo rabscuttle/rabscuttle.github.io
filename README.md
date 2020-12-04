@@ -4,7 +4,7 @@
 ---
 
 # Set up
-## Install the following in your enviornment:
+Install the following in your enviornment:
 1. pip install psutil
 2. Pip install plotly
 2. conda install -c plotly plotly-orca
